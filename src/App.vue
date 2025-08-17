@@ -1,15 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-
-const message = ref('Loading...')
-
-onMounted(async () => {
-  const res = await axios.get('http://localhost:8080/api/hello')
-  message.value = res.data
-})
+import LottoChart from "./components/LottoChart.vue";
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <h1>{{ message }}</h1>
-</template>
+  <div>
+    <Navbar /> 
+    <LottoChart />
+    <Footer />
+  </div>
+</template> 
